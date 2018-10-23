@@ -6,8 +6,8 @@ Kibana 3 into Docker!
 $ docker run -e ES_PROTO=http \
              -e ES_HOST=ip_prod \
              -e ES_PORT=9200 \
-             -p 8080:8080 \
-             -name kibana-prod \
+             -p ip_docker:8080:8080 \
+             --name kibana-prod \
              -d \
              miniplay/kibana-docker
 # DEV
@@ -15,7 +15,7 @@ $ docker run -e ES_PROTO=http \
 $ docker run -e ES_PROTO=http \
              -e ES_HOST=ip_lab \
              -e ES_PORT=9200 \
-             -p 8081:8080 \
-             -name kibana-lab \
+             -p ip_docker:8081:8080 \
+             --name kibana-lab \
              -d miniplay/kibana-docker
              
